@@ -93,4 +93,5 @@ class Servidorzinho:
 
 if __name__ == "__main__":
 	print("Starting Servidorzinho")
+	print(argv[1])
 	Servidorzinho((argv[1], 1337),10)
