@@ -10,7 +10,7 @@ class Servidorzinho:
 		self.conn = conn
 		pool = ThreadPoolExecutor(threads)
 		sig_sender = ThreadPoolExecutor(1)
-		sock = socket(a
+		sock = socket(
 				AF_INET,
 				SOCK_STREAM)
 		sock.bind(conn)
