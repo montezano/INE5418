@@ -21,7 +21,6 @@ class Servidorzinho:
 			try:
 				client_sock, client_addr = sock.accept()
 				client_sock.settimeout(1+len(self.addr))
-				print("Connection from {}.".format(client_addr))
 				pool.submit(self._handle, client_sock, client_addr)
 			except KeyboardInterrupt as err:
 				exit(0)
@@ -93,5 +92,4 @@ class Servidorzinho:
 
 if __name__ == "__main__":
 	print("Starting Servidorzinho")
-	print(argv[1])
 	Servidorzinho((argv[1], 1337),10)
