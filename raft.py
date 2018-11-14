@@ -81,7 +81,7 @@ class Servidorzinho:
 							#node dead
 							print("DeadNode")
 				else: #no breaks
-					leader = (argv[1], int(argv[2]))
+					leader = (argv[1], 1337)
 					for hand in handshakes:
 						with socket(AF_INET, SOCK_STREAM) as s:
 							s.settimeout(1)
@@ -93,4 +93,4 @@ class Servidorzinho:
 
 if __name__ == "__main__":
 	print("Starting Servidorzinho")
-	Servidorzinho(("0.0.0.0", 1337),10)
+	Servidorzinho((argv[1], 1337),10)
